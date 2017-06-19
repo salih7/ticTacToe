@@ -66,9 +66,10 @@ var renderBoard = function(move, player) {
     default:
       console.log('Invalid input');
   }
+  
   console.log('');
   console.log(`+-----+-----+-----+`);
-  console.log(`|  ${a00 || b00}  |  ${a01}  |  ${a02}  |`)
+  console.log(`|  ${a00}  |  ${a01}  |  ${a02}  |`)
   console.log(`+-----+-----+-----+`);
   console.log(`|  ${a01}  |  ${a11}  |  ${a12}  |`)  
   console.log(`+-----+-----+-----+`);
