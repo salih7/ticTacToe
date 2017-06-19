@@ -1,0 +1,12 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ticTacToe.js",
+  "scripts": {
+    "start": "node ticTacToe.js",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
