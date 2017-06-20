@@ -83,9 +83,9 @@ var ticTacToe = function(end) {
       if(err) {
         console.log(err);
       } else {
-        if(end >= 9) {
+        if(end >= 10) {
           console.log('GAME OVER!!!');
-          process.end();
+          return;
         }
         renderBoard(result.move);
         console.log(end);
