@@ -1,67 +1,64 @@
 const prompt = require('prompt');
-var a00 = ' ', a01 = ' ', a11 = ' ', 
-    a10 = ' ', a20 = ' ', a21 = ' ', 
-    a02 = ' ', a12 = ' ', a22 = ' ';
-var b00 = ' ', b01 = ' ', b11 = ' ', 
-    b10 = ' ', b20 = ' ', b21 = ' ', 
-    b02 = ' ', b12 = ' ', b22 = ' ';
+var x00 = ' ', x01 = ' ', x11 = ' ', 
+    x10 = ' ', x20 = ' ', x21 = ' ', 
+    x02 = ' ', x12 = ' ', x22 = ' ';
 var winner = null;
 
 var renderBoard = function(move, player) {
   switch(move) {
     case 'a00':
-      a00 = 'x';
+      x00 = 'x';
       break;
     case 'a01':
-      a01 = 'x';
-      break;
-    case 'a11':
-      a11 = 'x';
-      break
-    case 'a10':
-      a10 = 'x';
-      break;
-    case 'a20':
-      a20 = 'x';
-      break;
-    case 'a21':
-      a21 = 'x';
-      break;
-    case 'a22':
-      a22 = 'x';
+      x01 = 'x';
       break;
     case 'a02':
-      a02 = 'x';
+      x11 = 'x';
+      break
+    case 'a10':
+      x10 = 'x';
+      break;
+    case 'a11':
+      x20 = 'x';
       break;
     case 'a12':
-      a12 = 'x';
+      x21 = 'x';
+      break;
+    case 'a20':
+      x22 = 'x';
+      break;
+    case 'a21':
+      x02 = 'x';
+      break;
+    case 'a22':
+      x12 = 'x';
       break;
     case 'b00':
-      b00 = 'x';
+      x00 = 'o';
       break;
     case 'b01':
-      b01 = 'x';
-      break;
-    case 'b11':
-      b11 = 'x';
-      break
-    case 'b10':
-      b10 = 'x';
-      break;
-    case 'b20':
-      b20 = 'x';
-      break;
-    case 'b21':
-      b21 = 'x';
-      break;
-    case 'b22':
-      b22 = 'x';
+      x01 = 'o';
       break;
     case 'b02':
-      b02 = 'x';
+      x11 = 'o';
+      break
+    case 'b10':
+      x10 = 'o';
+      break;
+    case 'b11':
+      x20 = 'o';
       break;
     case 'b12':
-      b12 = 'x';
+      x21 = 'o';
+      break;
+    case 'b20':
+      x22 = 'o';
+      break;
+    case 'b21':
+      x02 = 'o';
+      break;
+    case 'b22':
+      x12 = 'o';
       break;
     default:
       console.log('Invalid input');
@@ -69,11 +66,11 @@ var renderBoard = function(move, player) {
   
   console.log('');
   console.log(`+-----+-----+-----+`);
-  console.log(`|  ${a00}  |  ${a01}  |  ${a02}  |`)
+  console.log(`|  ${x00}  |  ${x01}  |  ${x02}  |`)
   console.log(`+-----+-----+-----+`);
-  console.log(`|  ${a01}  |  ${a11}  |  ${a12}  |`)  
+  console.log(`|  ${x10}  |  ${x11}  |  ${x12}  |`)  
   console.log(`+-----+-----+-----+`);
-  console.log(`|  ${a02}  |  ${a21}  |  ${a22}  |`)
+  console.log(`|  ${x20}  |  ${x21}  |  ${x22}  |`)
   console.log(`+-----+-----+-----+`);
   console.log('');
 }
@@ -86,8 +83,8 @@ var ticTacToe = function(end) {
       if(err) {
         console.log(err);
       } else {
-        if(end >= 10) {
-          console.log('game over');
+        if(end >= 9) {
+          console.log('GAME OVER!!!');
           process.end();
         }
         renderBoard(result.move);
