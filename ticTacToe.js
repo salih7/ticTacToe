@@ -13,25 +13,25 @@ var renderBoard = function(move, player) {
       x01 = 'x';
       break;
     case 'a02':
-      x11 = 'x';
+      x02 = 'x';
       break
     case 'a10':
       x10 = 'x';
       break;
     case 'a11':
-      x20 = 'x';
+      x11 = 'x';
       break;
     case 'a12':
-      x21 = 'x';
+      x12 = 'x';
       break;
     case 'a20':
-      x22 = 'x';
+      x20 = 'x';
       break;
     case 'a21':
-      x02 = 'x';
+      x21 = 'x';
       break;
     case 'a22':
-      x12 = 'x';
+      x22 = 'x';
       break;
     case 'b00':
       x00 = 'o';
@@ -40,25 +40,25 @@ var renderBoard = function(move, player) {
       x01 = 'o';
       break;
     case 'b02':
-      x11 = 'o';
+      x02 = 'o';
       break
     case 'b10':
       x10 = 'o';
       break;
     case 'b11':
-      x20 = 'o';
+      x11 = 'o';
       break;
     case 'b12':
-      x21 = 'o';
+      x12 = 'o';
       break;
     case 'b20':
-      x22 = 'o';
+      x20 = 'o';
       break;
     case 'b21':
-      x02 = 'o';
+      x21 = 'o';
       break;
     case 'b22':
-      x12 = 'o';
+      x22 = 'o';
       break;
     default:
       console.log('Invalid input');
